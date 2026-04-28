@@ -35,4 +35,10 @@ class GradeClassifierTest {
         });
         assertEquals("Invalid GPA.", exception2.getMessage());
     }
+
+    @Test
+    void testClassify() {
+        assertEquals("Excellent", GradeClassifier.classifyGrade(9.0));
+        assertEquals("Good", GradeClassifier.classifyGrade(7.5));
+    }
 }
